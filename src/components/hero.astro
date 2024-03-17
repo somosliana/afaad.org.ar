@@ -1,18 +1,19 @@
 ---
+interface Props {
+  h1?: string;
+  p?: string;
+  button?: string;
+}
 
+const { h1, p, button } = Astro.props;
 ---
 
 <div class="hero">
   <div class="hero-content text-center">
     <div class="max-w-md">
-      <h1 class="text-5xl font-bold">AFAAD</h1>
-      <p class="py-6">
-        Asociación Filantrópica de Ayuda a Adictos Duales para la Prevención de
-        la Drogadicción
-      </p>
-      <!--
-        <button class="btn btn-primary">Get Started</button>
-      -->
+      {h1 ? <h1 class="text-5xl font-bold">{h1}</h1> : null}
+      {p ? <p class="py-6">{p}</p> : null}
+      {button ? <button class="btn btn-primary">{button}</button> : null}
     </div>
   </div>
 </div>

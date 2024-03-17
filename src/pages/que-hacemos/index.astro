@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import Base from "@/layouts/base.astro";
+
+const posts = (await getCollection("que-hacemos")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<Base h1="Que hacemos?">
+  <main>
+    <section>
+      <ul>
+        {
+          posts.map((post) => (
+            <li>
+              <a class="flex gap-4" href={`/que-hacemos/${post.slug}/`}>
+                <h4 class="title">{post.data.title}</h4>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
+</Base>

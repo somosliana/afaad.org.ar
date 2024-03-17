@@ -1,21 +1,9 @@
 ---
-// https://docs.astro.build/basics/astro-components/
-// import Counter from '../components/Counter.astro';
-import Nav from "../components/Nav.astro";
-import Hero from "../components/hero.astro";
+import Base from "@/layouts/base.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  </head>
-  <body>
-    <main class="max-w-screen-md px-2 mx-auto flex flex-col gap-8">
-      <Nav />
-      <Hero />
-    </main>
-  </body>
-</html>
+<Base
+  h1="AFAAD"
+  p="Asociación Filantrópica de Ayuda a Adictos Duales para la Prevención de la Drogadicción"
+  button="Contacto"
+/>
