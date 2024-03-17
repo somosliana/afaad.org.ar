@@ -1,6 +1,8 @@
 ---
 // https://docs.astro.build/basics/astro-components/
 // import Counter from '../components/Counter.astro';
+import Nav from "../components/Nav.astro";
+import Hero from "../components/hero.astro";
 ---
 
 <html lang="en">
@@ -11,8 +13,9 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
-    <main>
-      <h1>Hello World!</h1>
+    <main class="max-w-screen-md px-2 mx-auto flex flex-col gap-8">
+      <Nav />
+      <Hero />
     </main>
   </body>
 </html>
