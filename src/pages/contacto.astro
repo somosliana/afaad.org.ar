@@ -2,7 +2,16 @@
 import Base from "@/layouts/base.astro";
 ---
 
-<Base
-  h1="Contacto"
-  p="Puedes ponerte en contacto con nosotros a través del siguiente formulario o utilizando el correo y teléfono que aparecen más abajo"
-/>
+<Base h1="Contacto">
+  <form class="max-w-md grid gap-2 mx-auto" name="contact" netlify>
+    <label class="input input-bordered flex items-center gap-2">
+      Email
+      <input name="email" type="text" class="grow" placeholder="" />
+    </label>
+    <label class="input input-bordered flex items-center gap-2 min-h-24">
+      Mensaje
+      <input name="message" type="text" class="grow" placeholder="" />
+    </label>
+    <button class="btn btn-primary" type="submit">Send</button>
+  </form>
+</Base>
