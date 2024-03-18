@@ -2,7 +2,7 @@
 // https://docs.astro.build/basics/astro-components/
 import Nav from "@/components/Nav.astro";
 import Hero from "@/components/Hero.astro";
-const { h1, p, button = null } = Astro.props;
+const { title, description, button = null } = Astro.props;
 ---
 
 <html lang="en">
@@ -15,7 +15,7 @@ const { h1, p, button = null } = Astro.props;
   <body>
     <main class="max-w-screen-md px-2 mx-auto flex flex-col gap-8">
       <Nav />
-      <Hero h1={h1} p={p} button={button} />
+      <Hero h1={title} p={description} button={button} />
       <slot />
     </main>
   </body>

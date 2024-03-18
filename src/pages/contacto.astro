@@ -2,16 +2,20 @@
 import Base from "@/layouts/base.astro";
 ---
 
-<Base h1="Contacto">
-  <form class="max-w-md grid gap-2 mx-auto" name="contact" data-netlify="true">
-    <label class="input input-bordered flex items-center gap-2">
-      Email
-      <input name="email" type="text" class="grow" placeholder="" />
-    </label>
-    <label class="input input-bordered flex items-center gap-2 min-h-24">
-      Mensaje
-      <input name="message" type="text" class="grow" placeholder="" />
-    </label>
-    <button class="btn btn-primary" type="submit">Send</button>
+<Base title="Contacto">
+  <form
+    name="contact"
+    class="grid gap-2 mx-auto w-full max-w-prose"
+    data-netlify="true"
+  >
+    <input
+      name="email"
+      type="text"
+      placeholder="Email"
+      class="input input-bordered input-lg w-full"
+    />
+    <textarea name="message" class="textarea textarea-lg" placeholder="Mensaje"
+    ></textarea>
+    <button type="submit" class="btn btn-primary">Enviar</button>
   </form>
 </Base>

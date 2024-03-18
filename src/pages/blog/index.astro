@@ -2,12 +2,20 @@
 import { getCollection } from "astro:content";
 import Base from "@/layouts/base.astro";
 
+function formatDate(isoDate: string) {
+  const date = new Date(isoDate);
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
 const posts = (await getCollection("blog")).sort(
-  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+  (a, b) => a.data.date.valueOf() - b.data.date.valueOf()
 );
 ---
 
-<Base h1="Blog">
+<Base title="Blog">
   <main>
     <section>
       <ul>
@@ -15,8 +23,8 @@ const posts = (await getCollection("blog")).sort(
           posts.map((post) => (
             <li>
               <a class="flex gap-4" href={`/blog/${post.slug}/`}>
-                <p class="date">{post.data.pubDate}</p>
-                <h4 class="title">{post.data.title}</h4>
+                <p>{formatDate(post.data.date)}</p>
+                <h4>{post.data.title}</h4>
               </a>
             </li>
           ))

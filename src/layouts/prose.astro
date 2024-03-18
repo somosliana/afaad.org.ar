@@ -4,7 +4,7 @@ import LayoutBase from "@/layouts/base.astro";
 const { title, description } = Astro.props;
 ---
 
-<LayoutBase h1={title} p={description}>
+<LayoutBase title={title} description={description}>
   <article class="prose md:prose-lg lg:prose-xl prose-li:leading-normal">
     <slot />
   </article>
