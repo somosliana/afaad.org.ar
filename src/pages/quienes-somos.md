@@ -1,5 +1,6 @@
 ---
-layout: "@/layouts/quienes-somos.astro"
+title: Quienes somos?
+layout: "@/layouts/prose.astro"
 ---
 
 ## Hello World
