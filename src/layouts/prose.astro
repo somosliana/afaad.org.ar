@@ -1,7 +1,8 @@
 ---
 import LayoutBase from "@/layouts/base.astro";
 
-const { title, description } = Astro.props;
+const { title } = Astro.props.frontmatter || Astro.props;
+const { description } = Astro.props.frontmatter || Astro.props;
 ---
 
 <LayoutBase title={title} description={description}>
