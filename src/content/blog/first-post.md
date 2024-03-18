@@ -3,7 +3,7 @@ title: First post
 description: Lorem ipsum dolor sit amet
 h1: First post
 p: Lorem ipsum dolor sit amet
-pubDate: 2024-03-18T19:02:21.608Z
+date: 2024-03-18T19:02:21.608Z
 heroImage: /blog-placeholder-3.jpg
 ---
 

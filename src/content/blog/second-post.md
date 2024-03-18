@@ -3,7 +3,7 @@ title: "Second post"
 description: "Lorem ipsum dolor sit amet"
 h1: "Second post"
 p: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 15 2022"
+date: 2024-03-15T15:02:21.608Z
 heroImage: "/blog-placeholder-4.jpg"
 ---
 
