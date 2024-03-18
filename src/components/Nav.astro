@@ -1,5 +1,8 @@
 ---
-
+import { getCollection } from "astro:content";
+const queHacemos = (await getCollection("que-hacemos")).sort(
+  (a, b) => a.data.date.valueOf() - b.data.date.valueOf()
+);
 ---
 
 <div class="navbar border-b-[1px] border-gray-400">
@@ -29,9 +32,13 @@
         <li>
           <a>Que hacemos</a>
           <ul class="p-2">
-            <li><a href="/que-hacemos#a">Actividad A</a></li>
-            <li><a href="/que-hacemos#b">Actividad B</a></li>
-            <li><a href="/que-hacemos#c">Actividad B</a></li>
+            {
+              queHacemos.map((x: any) => (
+                <li>
+                  <a href={`/que-hacemos/${x.slug}/`}>{x.data.title}</a>
+                </li>
+              ))
+            }
           </ul>
         </li>
         <li><a href="/blog">Blog</a></li>
@@ -47,9 +54,13 @@
         <details>
           <summary>Que hacemos</summary>
           <ul class="p-2 rounded-t-none z-10">
-            <li><a href="/que-hacemos#a">Actividad A</a></li>
-            <li><a href="/que-hacemos#b">Actividad B</a></li>
-            <li><a href="/que-hacemos#c">Actividad C</a></li>
+            {
+              queHacemos.map((x: any) => (
+                <li>
+                  <a href={`/que-hacemos/${x.slug}/`}>{x.data.title}</a>
+                </li>
+              ))
+            }
           </ul>
         </details>
       </li>

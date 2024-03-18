@@ -12,10 +12,12 @@ import Base from "@/layouts/base.astro";
       name="email"
       type="text"
       placeholder="Email"
-      class="input input-bordered input-lg w-full"
+      class="input input-bordered input-lg input-ghost w-full"
     />
-    <textarea name="message" class="textarea textarea-lg" placeholder="Mensaje"
-    ></textarea>
+    <textarea
+      name="message"
+      class="textarea textarea-bordered textarea-lg textarea-ghost"
+      placeholder="Mensaje"></textarea>
     <button type="submit" class="btn btn-primary">Enviar</button>
   </form>
 </Base>
